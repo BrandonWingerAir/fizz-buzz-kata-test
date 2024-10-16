@@ -4,12 +4,15 @@ function fizzBuzz(value) {
     return value.toString();
 }
 
+function checkFizzBuzz(testValue, expectedResult) {
+    var result = fizzBuzz(testValue);
+    expect(result).to.equal(expectedResult);
+}
+
 it('returns 1 with 1 passed in', function(){
-    var result = fizzBuzz(1);
-    expect(result).to.equal('1');
+    checkFizzBuzz(1, '1');
 });
 
 it('returns 2 with 2 passed in', function(){
-    var result = fizzBuzz(2);
-    expect(result).to.equal('2');
+    checkFizzBuzz(2, '2');
 });
