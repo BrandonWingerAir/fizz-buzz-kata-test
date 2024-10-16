@@ -1,8 +1,13 @@
 var expect = require('chai').expect;
 
 function fizzBuzz(value) {
-    if (value % 3 == 0)
+    if (value % 3 == 0) {
+        if (value % 5 == 0) {
+            return 'FizzBuzz';
+        }
         return 'Fizz';
+    }
+
     if (value % 5 == 0)
         return 'Buzz';
 
@@ -26,7 +31,10 @@ it('returns Fizz with 3 passed in', function(){
     checkFizzBuzz(3, 'Fizz');
 });
 
-
 it('returns Buzz with 5 passed in', function(){
     checkFizzBuzz(5, 'Buzz');
+});
+
+it('returns FizzBuzz with 15 passed in', function() {
+    checkFizzBuzz(15, 'FizzBuzz');
 });
