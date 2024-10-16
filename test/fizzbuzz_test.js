@@ -3,6 +3,8 @@ var expect = require('chai').expect;
 function fizzBuzz(value) {
     if (value % 3 == 0)
         return 'Fizz';
+    if (value % 5 == 0)
+        return 'Buzz';
 
     return value.toString();
 }
@@ -22,4 +24,9 @@ it('returns 2 with 2 passed in', function(){
 
 it('returns Fizz with 3 passed in', function(){
     checkFizzBuzz(3, 'Fizz');
+});
+
+
+it('returns Buzz with 5 passed in', function(){
+    checkFizzBuzz(5, 'Buzz');
 });
